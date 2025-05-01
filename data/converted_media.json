@@ -2,6 +2,7 @@
   {
     "media_id": "0",
     "timestamp": "2025-04-29T11:12:52-07:00",
+    "permalink": "https://example.com",
     "versions": {
       "large": {
         "file_name": "0_1024w_large.webp",

@@ -2,6 +2,7 @@ import type { PageContext } from "vike/types";
 
 export type TInstagramImage = {
   mediaId: string;
+  permalink?: string;
   versions: {
     thumb: {
       fileName: string;
