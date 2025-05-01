@@ -23,10 +23,12 @@ const InstagramGridPhoto = ({
   imageBaseUrl,
   src,
   index,
+  permalink,
 }: {
   imageBaseUrl: string;
   src: TInstagramImage;
   index: number;
+  permalink?: string;
 }) => {
   const imageSizing =
     index === 0 ? imageSizes.firstPhoto : imageSizes.otherPhotos;
@@ -39,18 +41,31 @@ const InstagramGridPhoto = ({
     ${imageBaseUrl}/${src.versions[imageSizing["3x"]].fileName} 3x
   `;
 
-  return (
+  const image = (
     <img
       alt="Instagram post"
-      className={clsx("overflow-hidden rounded object-cover aspect-square", {
-        "row-span-2 col-span-2": index === 0,
-      })}
+      className={clsx("rounded object-cover aspect-square")}
       src={fallbackSrc}
       srcSet={srcSet}
       width={intrinsicSize.width}
       height={intrinsicSize.height}
       loading="lazy"
     />
+  );
+  return (
+    <div
+      className={clsx("overflow-hidden", {
+        "row-span-2 col-span-2": index === 0,
+      })}
+    >
+      {permalink ? (
+        <a href={permalink} target="_blank">
+          {image}
+        </a>
+      ) : (
+        image
+      )}
+    </div>
   );
 };
 
@@ -73,6 +88,7 @@ export default function InstagramGrid({
           imageBaseUrl={imageBaseUrl}
           src={src}
           index={index}
+          permalink={src.permalink}
         />
       ))}
     </div>
