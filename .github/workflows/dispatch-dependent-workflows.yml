@@ -1,6 +1,8 @@
 name: Dispatch Dependent Workflows
 on: ["workflow_dispatch", "push"]
 
+run-name: "Dispatch Dependent Workflows"
+
 jobs:
   trigger:
     runs-on: ubuntu-latest
