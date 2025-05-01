@@ -1,9 +1,5 @@
 name: Dispatch Dependent Workflows
-on:
-  workflow_dispatch:
-  push:
-    branches:
-      - '*'
+on: ["workflow_dispatch", "push"]
 
 jobs:
   trigger:
