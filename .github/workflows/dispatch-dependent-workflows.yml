@@ -1,0 +1,17 @@
+name: Dispatch Dependent Workflows
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - '*'
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: send event
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: '${{ secrets.DEPENDENT_REPO_TOKEN }}'
+          repository: '${{ secrets.DEPENDENT_REPO }}'
+          event-type: 'main_updated'
