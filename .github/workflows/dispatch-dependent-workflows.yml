@@ -4,10 +4,10 @@ on: ["workflow_dispatch", "push"]
 run-name: "Dispatch Dependent Workflows"
 
 jobs:
-  trigger:
+  dispatch_event:
     runs-on: ubuntu-latest
     steps:
-      - name: send event
+      - name: Send Event to Dependent Repo
         uses: peter-evans/repository-dispatch@v3
         with:
           token: '${{ secrets.DEPENDENT_REPO_TOKEN }}'
