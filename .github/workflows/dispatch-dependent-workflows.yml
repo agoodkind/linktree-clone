@@ -12,4 +12,4 @@ jobs:
         with:
           token: '${{ secrets.DEPENDENT_REPO_TOKEN }}'
           repository: '${{ secrets.DEPENDENT_REPO }}'
-          event-type: 'main_updated'
+          event-type: 'Linktree-Clone Main Updated'
