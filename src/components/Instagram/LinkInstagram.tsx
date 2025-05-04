@@ -19,19 +19,24 @@ export default function LinkInstagram({
   images,
   imageBaseUrl,
 }: TInstagramArgs) {
+  const url = `https://www.instagram.com/${username}`;
   return (
     <LinkWrapper>
       <LinkStandardInner
         link={{
           id: username,
           title,
-          url: `https://www.instagram.com/${username}`,
+          url,
           thumbnailUrl: instagramThumbnail,
         }}
       >
         {images && images.length > 0 ? (
           <div className="w-full h-full flex items-center justify-center px-4">
-            <InstagramGrid images={images} imageBaseUrl={imageBaseUrl ?? ""} />
+            <InstagramGrid
+              images={images}
+              imageBaseUrl={imageBaseUrl ?? ""}
+              fallbackUrl={url}
+            />
           </div>
         ) : null}
       </LinkStandardInner>
