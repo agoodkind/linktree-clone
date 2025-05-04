@@ -4,6 +4,7 @@ import clsx from "clsx";
 type InstagramGridProps = {
   images: TInstagramImage[];
   imageBaseUrl: string;
+  fallbackUrl: string;
 };
 
 const imageSizes = {
@@ -41,41 +42,44 @@ const InstagramGridPhoto = ({
     ${imageBaseUrl}/${src.versions[imageSizing["3x"]].fileName} 3x
   `;
 
-  const image = (
-    <img
-      alt="Instagram post"
-      className={clsx("rounded object-cover aspect-square")}
-      src={fallbackSrc}
-      srcSet={srcSet}
-      width={intrinsicSize.width}
-      height={intrinsicSize.height}
-      fetchPriority={index === 0 ? "high" : "auto"}
-      loading={index === 0 ? "eager" : "lazy"}
-    />
-  );
   return (
-    <div
-      className={clsx("overflow-hidden bg-[", {
+    <a
+      className={clsx("overflow-hidden", {
         "row-span-2 col-span-2": index === 0,
       })}
+      href={permalink}
+      target="_blank"
       onClick={() => {
-        if (permalink) {
-          gtag("event", "photo_click", {
-            photo_id: src.mediaId,
-            photo_url: permalink,
-          });
-          window.open(permalink, "_blank");
+        if (!permalink) {
+          return;
         }
+
+        gtag("event", "photo_click", {
+          photo_id: src.mediaId,
+          photo_url: permalink,
+        });
+
+        window.open(permalink, "_blank");
       }}
     >
-      {image}
-    </div>
+      <img
+        alt="Instagram post"
+        className={clsx("rounded object-cover aspect-square")}
+        src={fallbackSrc}
+        srcSet={srcSet}
+        width={intrinsicSize.width}
+        height={intrinsicSize.height}
+        fetchPriority={index === 0 ? "high" : "auto"}
+        loading={index === 0 ? "eager" : "lazy"}
+      />
+    </a>
   );
 };
 
 export default function InstagramGrid({
   images,
   imageBaseUrl,
+  fallbackUrl,
 }: InstagramGridProps) {
   if (images.length === 0) {
     return null;
@@ -92,7 +96,7 @@ export default function InstagramGrid({
           imageBaseUrl={imageBaseUrl}
           src={src}
           index={index}
-          permalink={src.permalink}
+          permalink={src.permalink ?? fallbackUrl}
         />
       ))}
     </div>
