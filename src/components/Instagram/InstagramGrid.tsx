@@ -55,17 +55,20 @@ const InstagramGridPhoto = ({
   );
   return (
     <div
-      className={clsx("overflow-hidden", {
+      className={clsx("overflow-hidden bg-[", {
         "row-span-2 col-span-2": index === 0,
       })}
+      onClick={() => {
+        if (permalink) {
+          gtag("event", "photo_click", {
+            photo_id: src.mediaId,
+            photo_url: permalink,
+          });
+          window.open(permalink, "_blank");
+        }
+      }}
     >
-      {permalink ? (
-        <a href={permalink} target="_blank">
-          {image}
-        </a>
-      ) : (
-        image
-      )}
+      {image}
     </div>
   );
 };
