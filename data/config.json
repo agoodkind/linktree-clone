@@ -5,26 +5,37 @@
     "fbDomainVerification": ""
   },
   "profile": {
-    "name": "example",
-    "profileImageUrl": "/logo.svg"
+    "name": "Alex Goodkind"
   },
   "meta": {
-    "copyrightText": "example"
+    "copyrightText": "goodkind.io",
+    "description": "Link website for goodkind.io"
   },
   "entries": [
     {
       "type": "link",
+      "id": "website",
+      "title": "Website",
+      "url": "https://goodkind.io"
+    },
+    {
+      "type": "link",
+      "id": "coffee",
+      "title": "Buy Me a Coffee",
+      "url": "https://buymeacoffee.com/agoodkind"
+    },
+    {
+      "type": "link",
       "id": "github",
-      "title": "💻 Example Link",
-      "url": "https://example.com",
-      "thumbnailUrl": "https://loremicon.com/poly/128/128/16413659596/jpg"
+      "title": "GitHub",
+      "url": "https://github.com/agoodkind",
+      "thumbnailUrl": "https://github.githubassets.com/favicons/favicon.svg"
     },
     {
       "type": "instagram",
       "id": "instagram",
-      "title": "📸 Example Instagram",
-      "username": "example",
-      "imageBaseUrl": "/media"
+      "title": "Instagram",
+      "username": "agoodkind"
     }
   ]
 }

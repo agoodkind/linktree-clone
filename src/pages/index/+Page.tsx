@@ -1,4 +1,9 @@
-import { entries, instagramImages, meta, profile } from "@/calculate-data";
+import {
+  calculateEntries,
+  calculateInstagramImages,
+  calculateMeta,
+  profile,
+} from "@/calculate-data";
 import LinkInstagram from "@components/Instagram/LinkInstagram";
 import LinkStandard from "@components/Standard/LinkStandard";
 
@@ -9,14 +14,16 @@ export default function MainPage() {
         <div className="flex h-full w-full flex-col px-4 py-8">
           <div className="mx-auto h-full w-full gap-5 flex flex-col max-w-lg">
             <div className="flex flex-col items-center ">
-              <div className="mb-4">
-                <img
-                  alt={profile.name}
-                  className="rounded-full object-contain size-24 bg-white"
-                  src={profile.profileImageUrl}
-                  role="presentation"
-                />
-              </div>
+              {profile.profileImageUrl ? (
+                <div className="mb-4">
+                  <img
+                    alt={profile.name}
+                    className="rounded-full object-contain size-24 bg-white"
+                    src={profile.profileImageUrl}
+                    role="presentation"
+                  />
+                </div>
+              ) : null}
               <div
                 className="mx-3 flex max-w-full items-center"
                 id="profile-title"
@@ -27,7 +34,7 @@ export default function MainPage() {
               </div>
             </div>
             <div className="items-center flex flex-col gap-4 @container/links-container mt-xl">
-              {entries.map((entry) => {
+              {calculateEntries().map((entry) => {
                 switch (entry.type) {
                   case "link":
                     return <LinkStandard key={entry.id} link={entry} />;
@@ -37,7 +44,7 @@ export default function MainPage() {
                         key={entry.id}
                         username={entry.username}
                         title={entry.title}
-                        images={instagramImages}
+                        images={calculateInstagramImages()}
                         imageBaseUrl={entry.imageBaseUrl}
                       />
                     );
@@ -50,9 +57,9 @@ export default function MainPage() {
         </div>
       </div>
       {/* copyright */}
-      {meta.copyrightText ? (
+      {calculateMeta().copyrightText ? (
         <div className="text-center text-sm text-white opacity-50 py-2">
-          &copy; {new Date().getFullYear()} {meta.copyrightText}
+          &copy; {new Date().getFullYear()} {calculateMeta().copyrightText}
         </div>
       ) : null}
     </div>
