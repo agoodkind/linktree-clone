@@ -1,4 +1,4 @@
-import { instagramImages } from "@/calculate-data";
+import { calculateInstagramImages } from "@/calculate-data";
 import LinkInstagram from "@components/Instagram/LinkInstagram";
 import type { Meta, StoryObj } from "@storybook/react";
 
@@ -24,7 +24,7 @@ export const Primary: Story = {
   args: {
     username: "example",
     title: "Instagram: @example",
-    images: instagramImages,
+    images: calculateInstagramImages(),
     imageBaseUrl: "/media",
     followers: 14123124123,
   },
