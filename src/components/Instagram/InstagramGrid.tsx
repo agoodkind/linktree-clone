@@ -49,7 +49,8 @@ const InstagramGridPhoto = ({
       srcSet={srcSet}
       width={intrinsicSize.width}
       height={intrinsicSize.height}
-      loading="lazy"
+      fetchPriority={index === 0 ? "high" : "auto"}
+      loading={index === 0 ? "eager" : "lazy"}
     />
   );
   return (
