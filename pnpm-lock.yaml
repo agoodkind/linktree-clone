@@ -60,6 +60,9 @@ importers:
       '@storybook/test':
         specifier: ^8.6.12
         version: 8.6.12(storybook@8.6.12(prettier@3.5.3))
+      '@types/facebook-pixel':
+        specifier: ^0.0.31
+        version: 0.0.31
       '@types/gtag.js':
         specifier: ^0.0.20
         version: 0.0.20
@@ -1310,6 +1313,9 @@ packages:
 
   '@types/estree@1.0.7':
     resolution: {integrity: sha512-w28IoSUCJpidD/TGviZwwMJckNESJZXFu7NBZ5YJ4mEUnNraUn9Pm8HSZm/jDF1pDWYKspWE7oVphigUPRakIQ==}
+
+  '@types/facebook-pixel@0.0.31':
+    resolution: {integrity: sha512-NyfutSDY9Cabk7IUsEMy2pcVPGVVQjsFI3caZkeZvJ9lffz/CZjJA84mUhluTRM/iHjZ96VwBMPORpDSioNeyg==}
 
   '@types/gtag.js@0.0.20':
     resolution: {integrity: sha512-wwAbk3SA2QeU67unN7zPxjEHmPmlXwZXZvQEpbEUQuMCRGgKyE1m6XDuTUA9b6pCGb/GqJmdfMOY5LuDjJSbbg==}
@@ -4242,6 +4248,8 @@ snapshots:
   '@types/doctrine@0.0.9': {}
 
   '@types/estree@1.0.7': {}
+
+  '@types/facebook-pixel@0.0.31': {}
 
   '@types/gtag.js@0.0.20': {}
 

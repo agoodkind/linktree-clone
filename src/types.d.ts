@@ -47,11 +47,21 @@ export type TPageContext = {
   enableEagerStreaming: boolean;
 } & PageContext;
 
-export type TRecentMedia = {
+export type TEntryBase = {
   id: string;
-  media_type: "IMAGE" | "VIDEO" | "CAROUSEL_ALBUM";
-  media_url: string;
-  thumbnail_url?: string;
-  permalink: string;
-  timestamp: string;
+  title: string;
 };
+
+export type TEntryLink = TEntryBase & {
+  type: "link";
+  url: string;
+  thumbnailUrl?: string;
+};
+
+export type TEntryInstagram = TEntryBase & {
+  type: "instagram";
+  username: string;
+  imageBaseUrl?: string;
+};
+
+export type TEntry = TEntryLink | TEntryInstagram;
