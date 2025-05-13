@@ -54,7 +54,7 @@
     "typescript-eslint": "^8.31.0",
     "vike": "^0.4.228",
     "vike-react": "^0.6.1",
-    "vite": "^6.3.2",
+    "vite": "^6.3.4",
     "vitest": "^3.1.2",
     "wrangler": "^4.13.0"
   },
