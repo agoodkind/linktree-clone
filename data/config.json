@@ -5,7 +5,8 @@
     "fbDomainVerification": ""
   },
   "profile": {
-    "name": "Alex Goodkind"
+    "name": "Alex Goodkind",
+    "profileImageUrl": "https://avatars.githubusercontent.com/agoodkind"
   },
   "meta": {
     "copyrightText": "goodkind.io",
@@ -35,7 +36,8 @@
       "type": "instagram",
       "id": "instagram",
       "title": "Instagram",
-      "username": "agoodkind"
+      "username": "agoodkind",
+      "imageBaseUrl": "/media"
     }
   ]
 }

@@ -13,14 +13,19 @@ export default function MainPage() {
       <div className="flex min-h-dvh w-full flex-col overflow-x-hidden relative">
         <div className="flex h-full w-full flex-col px-4 py-8">
           <div className="mx-auto h-full w-full gap-5 flex flex-col max-w-lg">
-            <div className="flex flex-col items-center ">
+            <a
+              className="flex flex-col items-center"
+              href="/"
+              onClickCapture={() => {
+                gtag("event", "profile_click");
+              }}
+            >
               {profile.profileImageUrl ? (
                 <div className="mb-4">
                   <img
                     alt={profile.name}
                     className="rounded-full object-contain size-24 bg-white"
                     src={profile.profileImageUrl}
-                    role="presentation"
                   />
                 </div>
               ) : null}
@@ -32,7 +37,7 @@ export default function MainPage() {
                   {profile.name}
                 </h1>
               </div>
-            </div>
+            </a>
             <div className="items-center flex flex-col gap-4 @container/links-container mt-xl">
               {calculateEntries().map((entry) => {
                 switch (entry.type) {
