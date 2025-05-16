@@ -49,7 +49,7 @@ const InstagramGridPhoto = ({
       })}
       href={permalink}
       target="_blank"
-      onClick={() => {
+      onClickCapture={() => {
         if (!permalink) {
           return;
         }
@@ -64,7 +64,7 @@ const InstagramGridPhoto = ({
     >
       <img
         alt="Instagram post"
-        className={clsx("rounded object-cover aspect-square")}
+        className={clsx("rounded object-cover aspect-[3/4]")}
         src={fallbackSrc}
         srcSet={srcSet}
         width={intrinsicSize.width}
