@@ -17,7 +17,7 @@ export default function MainPage() {
               className="flex flex-col items-center"
               href="/"
               onClickCapture={() => {
-                gtag("event", "profile_click", {});
+                gtag("event", "profile_click");
               }}
             >
               {profile.profileImageUrl ? (
