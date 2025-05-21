@@ -62,6 +62,7 @@ export type TEntryInstagram = TEntryBase & {
   type: "instagram";
   username: string;
   imageBaseUrl?: string;
+  showImages?: boolean;
 };
 
 export type TEntry = TEntryLink | TEntryInstagram;

@@ -9,6 +9,7 @@ type TInstagramArgs = {
   title: string;
   followers?: number;
   images?: TInstagramImage[];
+  showImages?: boolean;
   imageBaseUrl?: string;
 };
 
@@ -18,6 +19,7 @@ export default function LinkInstagram({
   title,
   images,
   imageBaseUrl,
+  showImages,
 }: TInstagramArgs) {
   const url = `https://www.instagram.com/${username}`;
   return (
@@ -30,7 +32,7 @@ export default function LinkInstagram({
           thumbnailUrl: instagramThumbnail,
         }}
       >
-        {images && images.length > 0 ? (
+        {showImages && images && images.length > 0 ? (
           <div className="w-full h-full flex items-center justify-center px-4">
             <InstagramGrid
               images={images}
