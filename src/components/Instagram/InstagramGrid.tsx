@@ -88,8 +88,23 @@ export default function InstagramGrid({
   // small pic view is 156x156
   // large pic view is 316x316
 
+  // grid-rows-3 grid-cols-3 if 6+ images
+  // grid-rows-2 grid-cols-3 if 4+ images
+  // grid-rows-2 grid-cols-2 if 2+ images
+  // do not show if < 2 images
+
+  if (images.length < 2) {
+    return null;
+  }
+
   return (
-    <div className="grid overflow-hidden rounded-md gap-1 grid-rows-3 grid-cols-3">
+    <div
+      className={clsx("grid overflow-hidden rounded-md gap-1", {
+        "grid-rows-3 grid-cols-3": images.length >= 6,
+        "grid-rows-2 grid-cols-3": images.length >= 4,
+        "grid-rows-2 grid-cols-2": images.length >= 2,
+      })}
+    >
       {images.slice(0, 6).map((src, index) => (
         <InstagramGridPhoto
           key={`${index}-${src.mediaId}`}
