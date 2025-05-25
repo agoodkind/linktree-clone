@@ -37,7 +37,8 @@
       "id": "instagram",
       "title": "Instagram",
       "username": "agoodkind",
-      "imageBaseUrl": "/media"
+      "imageBaseUrl": "/media",
+      "showImages": true
     }
   ]
 }
