@@ -7,6 +7,10 @@ import {
 import LinkInstagram from "@components/Instagram/LinkInstagram";
 import LinkStandard from "@components/Standard/LinkStandard";
 
+const entries = calculateEntries();
+const instagramImages = calculateInstagramImages();
+const meta = calculateMeta();
+
 export default function MainPage() {
   return (
     <div className="bg-gradient-to-t from-[rgb(235,142,39)] to-[rgb(255,70,72)]">
@@ -39,7 +43,7 @@ export default function MainPage() {
               </div>
             </a>
             <div className="items-center flex flex-col gap-4 @container/links-container mt-xl">
-              {calculateEntries().map((entry) => {
+              {entries.map((entry) => {
                 switch (entry.type) {
                   case "link":
                     return <LinkStandard key={entry.id} link={entry} />;
@@ -49,7 +53,8 @@ export default function MainPage() {
                         key={entry.id}
                         username={entry.username}
                         title={entry.title}
-                        images={calculateInstagramImages()}
+                        images={instagramImages}
+                        showImages={entry.showImages}
                         imageBaseUrl={entry.imageBaseUrl}
                       />
                     );
@@ -62,9 +67,9 @@ export default function MainPage() {
         </div>
       </div>
       {/* copyright */}
-      {calculateMeta().copyrightText ? (
+      {meta.copyrightText ? (
         <div className="text-center text-sm text-white opacity-50 py-2">
-          &copy; {new Date().getFullYear()} {calculateMeta().copyrightText}
+          &copy; {new Date().getFullYear()} {meta.copyrightText}
         </div>
       ) : null}
     </div>
