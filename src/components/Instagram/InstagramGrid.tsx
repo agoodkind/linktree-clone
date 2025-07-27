@@ -37,6 +37,7 @@ const InstagramGridPhoto = ({
     <a
       className={clsx("overflow-hidden")}
       href={permalink}
+      target="_blank"
       onClickCapture={() => {
         if (!permalink) {
           return;
