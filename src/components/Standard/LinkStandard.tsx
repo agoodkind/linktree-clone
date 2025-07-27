@@ -18,7 +18,6 @@ export function LinkStandardInner({
     <>
       <a
         href={link.url}
-        target="_blank"
         className="w-full cursor-pointer"
         onClick={() => {
           gtag("event", "link_click", {
