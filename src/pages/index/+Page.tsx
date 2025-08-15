@@ -35,8 +35,8 @@ export default function MainPage() {
                       "focus-within:ring-2 focus-within:ring-white focus-within:ring-offset-1",
 
                       // Interactive effects
-                      "hover:translate-1 hover:shadow-hard-4",
-                      "active:translate-1 active:shadow-hard-4",
+                      "hover:translate-1",
+                      "active:translate-1",
                     ])}
                     src={"/chaos-wrestle.png"}
                   />
