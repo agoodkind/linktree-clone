@@ -28,8 +28,8 @@ export default function MainPage() {
                 <div className="mb-4">
                   <img
                     alt={profile.name}
-                    className="rounded-full object-contain size-24 bg-white"
-                    src={profile.profileImageUrl}
+                    className="object-contain size-60"
+                    src={"/chaos-wrestle.png"}
                   />
                 </div>
               ) : null}
