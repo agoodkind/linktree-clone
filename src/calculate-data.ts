@@ -28,7 +28,13 @@ export const calculateTracking = () => {
 
 export const calculateMeta = () => {
   return config.meta as {
+    title?: string;
     copyrightText?: string;
     description?: string;
+    ogImage?: string;
+    url?: string;
+    favicon?: string;
+    manifest?: string;
+    appleTouchIcon?: string;
   };
 };
