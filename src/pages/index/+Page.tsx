@@ -6,6 +6,7 @@ import {
 } from "@/calculate-data";
 import LinkInstagram from "@components/Instagram/LinkInstagram";
 import LinkStandard from "@components/Standard/LinkStandard";
+import clsx from "clsx";
 
 const entries = calculateEntries();
 const instagramImages = calculateInstagramImages();
@@ -28,7 +29,15 @@ export default function MainPage() {
                 <div className="mb-4">
                   <img
                     alt={profile.name}
-                    className="object-contain size-60"
+                    className={clsx([
+                      "object-contain size-60",
+                      "focus:ring-2 focus:ring-white focus:ring-offset-1",
+                      "focus-within:ring-2 focus-within:ring-white focus-within:ring-offset-1",
+
+                      // Interactive effects
+                      "hover:translate-1 hover:shadow-hard-4",
+                      "active:translate-1 active:shadow-hard-4",
+                    ])}
                     src={"/chaos-wrestle.png"}
                   />
                 </div>
