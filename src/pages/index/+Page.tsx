@@ -38,7 +38,7 @@ export default function MainPage() {
                       "hover:translate-1",
                       "active:translate-1",
                     ])}
-                    src={"/chaos-wrestle.png"}
+                    src={profile.profileImageUrl}
                   />
                 </div>
               ) : null}
