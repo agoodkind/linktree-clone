@@ -16,7 +16,7 @@ const loadConfigAsync = async (
   path: string = configPath,
 ): Promise<ConfigData> => {
   const response = await import(/* @vite-ignore */ path, {
-    assert: { type: "json" },
+    with: { type: "json" },
   });
 
   return response.default;
@@ -26,7 +26,7 @@ export const loadConvertedMediaAsync = async (
   path: string = convertedMediaPath,
 ): Promise<ConvertedMediaData> => {
   const response = await import(/* @vite-ignore */ path, {
-    assert: { type: "json" },
+    with: { type: "json" },
   });
 
   return deepCamelCaseKeys(response.default);
