@@ -8,6 +8,45 @@ Highly optimized static website version
 2. Build with `pnpm run build`
 3. Upload `dist/client` to your desired hosting services (eg. Github Pages or Cloudflare Pages)
 
+## Configurable Directories
+
+This project supports configurable config and public directories through VS Code launch configurations. You can use different configurations for different environments:
+
+### Available Launch Configurations
+
+1. **Dev** - Uses root-level `data/` and `public/` directories
+   - Config dir: `${workspaceFolder}/data`
+   - Public dir: `${workspaceFolder}/public`
+
+2. **Dev (Custom Config)** - Uses linktree-clone local directories
+   - Config dir: `${workspaceFolder}/linktree-clone/data`
+   - Public dir: `${workspaceFolder}/linktree-clone/public`
+
+### Environment Variables
+
+The following environment variables can be set in launch configurations:
+
+- `CONFIG_DIR` - Path to the configuration directory (default: `./data`)
+- `PUBLIC_DIR` - Path to the public assets directory (default: `./public`)
+
+### Creating Custom Configurations
+
+You can create your own launch configurations by adding environment variables:
+
+```json
+{
+  "name": "My Custom Dev",
+  "cwd": "${workspaceFolder}/linktree-clone",
+  "request": "launch",
+  "type": "node-terminal",
+  "command": "NO_COLOR=true pnpm run dev",
+  "env": {
+    "CONFIG_DIR": "/path/to/your/config",
+    "PUBLIC_DIR": "/path/to/your/public"
+  }
+}
+```
+
 ## Instagram Grid instructions
 
 1. Place instagram photos in `public/media`

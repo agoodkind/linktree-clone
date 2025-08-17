@@ -66,3 +66,30 @@ export type TEntryInstagram = TEntryBase & {
 };
 
 export type TEntry = TEntryLink | TEntryInstagram;
+
+// Type definitions for the JSON data structures
+interface ConfigData {
+  tracking: {
+    gtagId: string;
+    fbPixelId: string;
+    fbDomainVerification: string;
+  };
+  profile: {
+    name: string;
+    displayName: string;
+    profileImageUrl: string;
+  };
+  metadata: {
+    title?: string;
+    copyrightText?: string;
+    description?: string;
+    ogImage?: string;
+    url?: string;
+    favicon?: string;
+    manifest?: string;
+    appleTouchIcon?: string;
+  };
+  entries: TEntry[];
+}
+
+type ConvertedMediaData = TInstagramImage[];

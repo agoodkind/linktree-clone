@@ -1,18 +1,15 @@
-import {
-  calculateEntries,
-  calculateInstagramImages,
-  calculateMeta,
-  profile,
-} from "@/calculate-data";
 import LinkInstagram from "@components/Instagram/LinkInstagram";
 import LinkStandard from "@components/Standard/LinkStandard";
 import clsx from "clsx";
-
-const entries = calculateEntries();
-const instagramImages = calculateInstagramImages();
-const meta = calculateMeta();
+import { useData } from "vike-react/useData"; // or vike-vue / vike-solid
+import type { Data } from "./+data";
 
 export default function MainPage() {
+  const data = useData<Data>();
+
+  const { profile, entries, metadata } = data.config;
+  const instagramImages = data.convertedMedia;
+
   return (
     <div className="bg-gradient-to-t from-[rgb(235,142,39)] to-[rgb(255,70,72)]">
       <div className="flex min-h-dvh w-full flex-col overflow-x-hidden relative">
@@ -76,9 +73,9 @@ export default function MainPage() {
         </div>
       </div>
       {/* copyright */}
-      {meta.copyrightText ? (
+      {metadata.copyrightText ? (
         <div className="text-center text-sm text-white opacity-50 py-2">
-          &copy; {new Date().getFullYear()} {meta.copyrightText}
+          &copy; {new Date().getFullYear()} {metadata.copyrightText}
         </div>
       ) : null}
     </div>

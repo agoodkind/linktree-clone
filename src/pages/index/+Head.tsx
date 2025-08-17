@@ -1,8 +1,16 @@
-import { calculateMeta, calculateTracking } from "@/calculate-data";
+import { useData } from "vike-react/useData"; // or vike-vue / vike-solid
+import type { Data } from "./+data";
 
-const gtagScript = () => {
-  const { gtagId } = calculateTracking();
-  return `
+export default function Head() {
+  const data = useData<Data>();
+  const { metadata, tracking } = data.config;
+
+  const { favicon, manifest, title, description, url, ogImage } = metadata;
+  const { gtagId, fbDomainVerification } = tracking;
+
+  const gtagScript = () => {
+    const { gtagId } = tracking;
+    return `
     window.dataLayer = window.dataLayer || [];
     function gtag() {
       dataLayer.push(arguments);
@@ -10,11 +18,11 @@ const gtagScript = () => {
     gtag("js", new Date());
     gtag("config", "${gtagId}");
   `;
-};
+  };
 
-const fbqScript = () => {
-  const { fbPixelId } = calculateTracking();
-  return `
+  const fbqScript = () => {
+    const { fbPixelId } = tracking;
+    return `
     !(function (f, b, e, v, n, t, s) {
       if (f.fbq) return;
       n = f.fbq = function () {
@@ -39,13 +47,8 @@ const fbqScript = () => {
     fbq("init", "${fbPixelId}");
     fbq("track", "PageView");
   `;
-};
+  };
 
-export default function Head() {
-  const { favicon, manifest, title, description, url, ogImage } =
-    calculateMeta();
-
-  const { gtagId, fbDomainVerification } = calculateTracking();
   return (
     <>
       <meta charSet="UTF-8" />
