@@ -1,4 +1,4 @@
-import { calculateInstagramImages } from "@/calculate-data";
+import { loadConvertedMediaAsync } from "@/pages/index/+data";
 import LinkInstagram from "@components/Instagram/LinkInstagram";
 import type { Meta, StoryObj } from "@storybook/react";
 
@@ -24,7 +24,7 @@ export const Primary: Story = {
   args: {
     username: "example",
     title: "Instagram: @example",
-    images: calculateInstagramImages(),
+    images: await loadConvertedMediaAsync(),
     imageBaseUrl: "/media",
     followers: 14123124123,
   },
