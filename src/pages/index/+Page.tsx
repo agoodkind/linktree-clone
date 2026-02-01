@@ -73,7 +73,7 @@ export default function MainPage() {
         </div>
       </div>
       {/* copyright */}
-      {metadata.copyrightText ? (
+      {metadata?.copyrightText ? (
         <div className="text-center text-sm text-white opacity-50 py-2">
           &copy; {new Date().getFullYear()} {metadata.copyrightText}
         </div>
