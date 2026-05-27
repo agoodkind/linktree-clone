@@ -34,7 +34,7 @@
     "@types/facebook-pixel": "^0.0.31",
     "@types/gtag.js": "^0.0.20",
     "@types/lodash": "^4.17.20",
-    "@types/node": "^22.17.2",
+    "@types/node": "^25.9.1",
     "@types/react": "^19.1.10",
     "@types/react-dom": "^19.1.7",
     "@vitejs/plugin-react-swc": "^3.11.0",
