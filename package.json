@@ -49,7 +49,7 @@
     "globals": "^17.6.0",
     "playwright": "^1.60.0",
     "prettier": "3.8.3",
-    "storybook": "^8.6.17",
+    "storybook": "^8.6.18",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.60.1",
     "vike": "^0.4.259",
