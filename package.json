@@ -51,7 +51,7 @@
     "prettier": "3.9.5",
     "storybook": "^8.6.18",
     "typescript": "~5.9.3",
-    "typescript-eslint": "^8.63.0",
+    "typescript-eslint": "^8.64.0",
     "vike": "^0.4.260",
     "vike-react": "^0.6.25",
     "vite": "^7.3.5",
