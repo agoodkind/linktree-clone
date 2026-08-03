@@ -35,8 +35,8 @@
     "@types/gtag.js": "^0.0.20",
     "@types/lodash": "^4.17.24",
     "@types/node": "^26.1.2",
-    "@types/react": "^19.2.17",
-    "@types/react-dom": "^19.2.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
     "@vitejs/plugin-react-swc": "^4.3.3",
     "@vitest/browser": "^4.1.10",
     "@vitest/coverage-v8": "^4.1.10",
@@ -47,7 +47,7 @@
     "eslint-plugin-storybook": "^9.0.7",
     "favicons": "^7.3.1",
     "globals": "^17.8.0",
-    "playwright": "^1.62.0",
+    "playwright": "^1.62.1",
     "prettier": "3.9.6",
     "storybook": "^8.6.18",
     "typescript": "~5.9.3",
@@ -56,7 +56,7 @@
     "vike-react": "^0.6.25",
     "vite": "^7.3.5",
     "vitest": "^4.1.10",
-    "wrangler": "^4.115.0"
+    "wrangler": "^4.117.0"
   },
   "eslintConfig": {
     "extends": [
