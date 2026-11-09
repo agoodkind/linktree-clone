@@ -100,8 +100,8 @@ importers:
         specifier: ^0.5.7
         version: 0.5.7(eslint@9.33.0(jiti@2.7.0)(supports-color@10.2.2))
       eslint-plugin-storybook:
-        specifier: ^10.6.5
-        version: 10.6.5(eslint@9.33.0(jiti@2.7.0)(supports-color@10.2.2))(supports-color@10.2.2)(typescript@5.9.3)
+        specifier: ^10.6.6
+        version: 10.6.6(eslint@9.33.0(jiti@2.7.0)(supports-color@10.2.2))(supports-color@10.2.2)(typescript@5.9.3)
       favicons:
         specifier: ^7.3.1
         version: 7.3.1(@types/node@26.6.6)
@@ -109,8 +109,8 @@ importers:
         specifier: ^17.14.0
         version: 17.14.0
       playwright:
-        specifier: ^1.64.1
-        version: 1.64.1
+        specifier: ^1.65.0
+        version: 1.65.0
       prettier:
         specifier: 3.9.10
         version: 3.9.10
@@ -124,11 +124,11 @@ importers:
         specifier: ^8.72.1
         version: 8.72.1(eslint@9.33.0(jiti@2.7.0)(supports-color@10.2.2))(supports-color@10.2.2)(typescript@5.9.3)
       vike:
-        specifier: ^0.4.269
-        version: 0.4.269(react-streaming@0.4.20(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(srvx@0.12.8)(supports-color@10.2.2)(vite@7.3.7(@types/node@26.6.6)(jiti@2.7.0)(lightningcss@1.33.0))
+        specifier: ^0.4.270
+        version: 0.4.270(react-streaming@0.4.20(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(srvx@0.12.8)(supports-color@10.2.2)(vite@7.3.7(@types/node@26.6.6)(jiti@2.7.0)(lightningcss@1.33.0))
       vike-react:
         specifier: ^0.6.32
-        version: 0.6.32(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(vike@0.4.269(react-streaming@0.4.20(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(srvx@0.12.8)(supports-color@10.2.2)(vite@7.3.7(@types/node@26.6.6)(jiti@2.7.0)(lightningcss@1.33.0)))
+        version: 0.6.32(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(vike@0.4.270(react-streaming@0.4.20(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(srvx@0.12.8)(supports-color@10.2.2)(vite@7.3.7(@types/node@26.6.6)(jiti@2.7.0)(lightningcss@1.33.0)))
       vite:
         specifier: ^7.3.7
         version: 7.3.7(@types/node@26.6.6)(jiti@2.7.0)(lightningcss@1.33.0)
@@ -1783,39 +1783,6 @@ packages:
       srvx:
         optional: true
 
-  '@universal-middleware/core@0.7.1':
-    resolution: {integrity: sha512-SVxKEjycCfibZnVnr9voo9AMTeAOVBt0V/T2QaiDQVzBVFlgfwMBtz74jrr8CABmc1hVOUCwzTFkpa+OqbC95A==}
-    engines: {node: '>=22'}
-    peerDependencies:
-      '@cloudflare/workers-types': ^4 || ^5
-      '@hattip/core': ^0.0.49
-      '@types/express': ^4 || ^5
-      '@webroute/route': ^0.8
-      elysia: ^1
-      fastify: ^5
-      h3: ^1 || ^2
-      hono: ^4
-      srvx: '>=0.8'
-    peerDependenciesMeta:
-      '@cloudflare/workers-types':
-        optional: true
-      '@hattip/core':
-        optional: true
-      '@types/express':
-        optional: true
-      '@webroute/route':
-        optional: true
-      elysia:
-        optional: true
-      fastify:
-        optional: true
-      h3:
-        optional: true
-      hono:
-        optional: true
-      srvx:
-        optional: true
-
   '@universal-middleware/core@0.7.2':
     resolution: {integrity: sha512-MFcAC/EzmgzkBZy+CK5I/ViKWHGLC048BHcm9KxTrAUy3czwRY2/oquNZrwvUGBiJLN+PjzoeIMQfYSub+Vefg==}
     engines: {node: '>=22'}
@@ -2335,8 +2302,8 @@ packages:
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9.7
 
-  eslint-plugin-storybook@10.6.5:
-    resolution: {integrity: sha512-sQSRwmbqcyGVtjVGUSOPTM5TFjopoit3blQxMcsHeqmmR1PJsciLH/WjgG7CT+u2/F0HMJFsQa+TqJSFDxXwWQ==}
+  eslint-plugin-storybook@10.6.6:
+    resolution: {integrity: sha512-3bQT92I/MU2yZeBjIm+v2pe6q55V764jCMccUg+OSLsGOdJ+nRZ80W8FpjbecpdBdkO80yR56jVcqLFamDwZUA==}
     peerDependencies:
       eslint: '>=8'
 
@@ -3054,13 +3021,13 @@ packages:
     resolution: {integrity: sha512-qcJu88Q2IWqJsDD529JKMdwGm/dvInW4HvQnRwiH9JtihJvzGOscDtHE3x1pBKeUOTysQ8kVmLnJ2kJu7yhcGA==}
     engines: {node: '>=12'}
 
-  playwright-core@1.64.1:
-    resolution: {integrity: sha512-BC4s8y6SEVA6Q1rSxZTto8hI1KUI3xXlHGZgvGqP4IqPdI/a6FX9H29IDNz7vKo9l21b6LfYosScPL6M3xxyDQ==}
+  playwright-core@1.65.0:
+    resolution: {integrity: sha512-vNSKgH6YqtN7cdT/L334zo0a+YwkrpicyrHJlWWPIm/Q+Nn2SWInil01oT0mbu96U4GgoRtCYQD9CzJQgju+lA==}
     engines: {node: '>=20'}
     hasBin: true
 
-  playwright@1.64.1:
-    resolution: {integrity: sha512-HCrVhHr5QQuwYoswEUGTb7gGp522yflbv/ST8nF4sFWGuLjQCt17Q/EubpGGSNKYn1tsTCPZxqHhHCfVURu7UA==}
+  playwright@1.65.0:
+    resolution: {integrity: sha512-F3AMWcR44qMBt4kq+6Kb6mX7bjGXshktKFOPULd7reED6ZJWevjbNRqysP7q+AATE9kdPEZBibex1BYsvpVoeA==}
     engines: {node: '>=20'}
     hasBin: true
 
@@ -3536,8 +3503,8 @@ packages:
       react-dom: '>=19'
       vike: '>=0.4.250'
 
-  vike@0.4.269:
-    resolution: {integrity: sha512-KCAchEgVMpOQFqvbTN7rZkz39ikLQoGdsu3ukv1HnTfWUAOGXQvfuchB3PJ975FCB8eNtbiHdIq8DfQ8il2Dfw==}
+  vike@0.4.270:
+    resolution: {integrity: sha512-gRzXeQeIqTBYwUTx81y7UHduh8jAE4rCGaIYnJGNe9LrUMqdg1PYI6Uf3tZellGuuv9BDrUqsNURFS9mrsNzdQ==}
     engines: {node: '>=20.19.0'}
     hasBin: true
     peerDependencies:
@@ -5112,13 +5079,6 @@ snapshots:
     optionalDependencies:
       srvx: 0.12.8
 
-  '@universal-middleware/core@0.7.1(srvx@0.12.8)':
-    dependencies:
-      regexparam: 3.0.0
-      tough-cookie: 6.0.2
-    optionalDependencies:
-      srvx: 0.12.8
-
   '@universal-middleware/core@0.7.2(srvx@0.12.8)':
     dependencies:
       regexparam: 3.0.0
@@ -5143,7 +5103,7 @@ snapshots:
 
   '@universal-middleware/node@0.2.9(srvx@0.12.8)':
     dependencies:
-      '@universal-middleware/core': 0.7.1(srvx@0.12.8)
+      '@universal-middleware/core': 0.7.2(srvx@0.12.8)
     transitivePeerDependencies:
       - '@cloudflare/workers-types'
       - '@hattip/core'
@@ -5813,7 +5773,7 @@ snapshots:
       string.prototype.matchall: 4.0.12
       string.prototype.repeat: 1.0.0
 
-  eslint-plugin-storybook@10.6.5(eslint@9.33.0(jiti@2.7.0)(supports-color@10.2.2))(supports-color@10.2.2)(typescript@5.9.3):
+  eslint-plugin-storybook@10.6.6(eslint@9.33.0(jiti@2.7.0)(supports-color@10.2.2))(supports-color@10.2.2)(typescript@5.9.3):
     dependencies:
       '@typescript-eslint/types': 8.72.1
       '@typescript-eslint/utils': 8.72.1(eslint@9.33.0(jiti@2.7.0)(supports-color@10.2.2))(supports-color@10.2.2)(typescript@5.9.3)
@@ -6519,11 +6479,11 @@ snapshots:
 
   picomatch@4.0.7: {}
 
-  playwright-core@1.64.1: {}
+  playwright-core@1.65.0: {}
 
-  playwright@1.64.1:
+  playwright@1.65.0:
     dependencies:
-      playwright-core: 1.64.1
+      playwright-core: 1.65.0
 
   pngjs@7.0.0: {}
 
@@ -7101,14 +7061,14 @@ snapshots:
 
   uuid@9.0.1: {}
 
-  vike-react@0.6.32(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(vike@0.4.269(react-streaming@0.4.20(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(srvx@0.12.8)(supports-color@10.2.2)(vite@7.3.7(@types/node@26.6.6)(jiti@2.7.0)(lightningcss@1.33.0))):
+  vike-react@0.6.32(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(vike@0.4.270(react-streaming@0.4.20(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(srvx@0.12.8)(supports-color@10.2.2)(vite@7.3.7(@types/node@26.6.6)(jiti@2.7.0)(lightningcss@1.33.0))):
     dependencies:
       react: 19.3.1
       react-dom: 19.3.1(react@19.3.1)
       react-streaming: 0.4.20(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
-      vike: 0.4.269(react-streaming@0.4.20(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(srvx@0.12.8)(supports-color@10.2.2)(vite@7.3.7(@types/node@26.6.6)(jiti@2.7.0)(lightningcss@1.33.0))
+      vike: 0.4.270(react-streaming@0.4.20(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(srvx@0.12.8)(supports-color@10.2.2)(vite@7.3.7(@types/node@26.6.6)(jiti@2.7.0)(lightningcss@1.33.0))
 
-  vike@0.4.269(react-streaming@0.4.20(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(srvx@0.12.8)(supports-color@10.2.2)(vite@7.3.7(@types/node@26.6.6)(jiti@2.7.0)(lightningcss@1.33.0)):
+  vike@0.4.270(react-streaming@0.4.20(react-dom@19.3.1(react@19.3.1))(react@19.3.1))(srvx@0.12.8)(supports-color@10.2.2)(vite@7.3.7(@types/node@26.6.6)(jiti@2.7.0)(lightningcss@1.33.0)):
     dependencies:
       '@babel/core': 7.29.7(supports-color@10.2.2)
       '@babel/types': 7.29.8
